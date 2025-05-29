@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Internal CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation Bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: orange;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #97e5e8;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: orange;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero span {
+      color: #ffd700;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #f39c12;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e67e22;
+    }
+
+    /* Skill Section */
+    .skills {
+      padding: 50px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .skills-container {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skill {
+      background: skyblue;
+      margin: 10px;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* Project Section */
+    .projects {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .project-container {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 50px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: orange;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #f39c12;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="topbar">
+    <div class="logo">Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Hello, I am Vipul Dixit</h1>
+    <p>Full Stack Developer</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="Skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Java</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="Projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Simple Website</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Animal Website</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      © 2025 Vipul Dixit | Follow Me
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </p>
+  </footer>
+</body>
+</html>
